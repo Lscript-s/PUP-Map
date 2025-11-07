@@ -18,4 +18,35 @@ html, body {
     width: auto;
     height: auto;
 }
+.tooltip {
+    position: absolute;
+    background-color: rgba(116, 30, 30, 0.95);
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 12px;
+    max-width: 20vw;
+    font-size: 14px;
+    pointer-events: none;
+    box-sizing: border-box;
+    z-index: 1000;
 
+    /* Enhanced Animation */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px) scale(0.95);
+    transition: opacity 0.3s ease,
+                transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                visibility 0.3s ease;
+}
+
+.tooltip.show {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.tooltip img{
+    width: 100%;
+    height: auto;
+    margin-bottom: 8px;
+}
