@@ -20,6 +20,8 @@ html, body {
 }
 .tooltip {
     position: absolute;
+    top: 0;
+    left: 0;
     background-color: rgba(116, 30, 30, 0.95);
     color: #fff;
     border-radius: 5px;
@@ -28,10 +30,9 @@ html, body {
     font-size: 14px;
     pointer-events: none;
     box-sizing: border-box;
-    z-index: 1000;
-
-    /* Enhanced Animation */
+    z-index: 0;
     opacity: 0;
+    overflow-wrap: break-word;
     visibility: hidden;
     transform: translateY(10px) scale(0.95);
     transition: opacity 0.3s ease,
@@ -43,6 +44,7 @@ html, body {
     visibility: visible;
     opacity: 1;
     transform: translateY(0) scale(1);
+    z-index: 1000;
 }
 
 .tooltip img{
