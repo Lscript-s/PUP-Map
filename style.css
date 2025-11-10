@@ -10,7 +10,6 @@ html, body {
 
 .map-container {
     position: relative;
-    max-height: 90vh; 
 }
 
 .map-image {
@@ -37,8 +36,8 @@ html, body {
     visibility: hidden;
     transform: translateY(10px) scale(0.95);
     transition: opacity 0.3s ease,
-                transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-                visibility 0.3s ease;
+    transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 0.3s ease;
 }
 
 .tooltip.show {
@@ -52,4 +51,10 @@ html, body {
     width: 100%;
     height: auto;
     margin-bottom: 8px;
+}
+
+.watermark {
+    font-size: 20px;
+    text-align: center;
+    color: rgba(255, 255, 255);
 }
